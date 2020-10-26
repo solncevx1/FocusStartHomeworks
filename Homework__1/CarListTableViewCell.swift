@@ -9,6 +9,12 @@ import UIKit
 
 class CarListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var YearLabel: UILabel!
+    @IBOutlet weak var carNameLabel: UILabel!
+    @IBOutlet weak var bodyStyleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
