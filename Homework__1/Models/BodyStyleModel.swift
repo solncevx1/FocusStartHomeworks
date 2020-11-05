@@ -8,8 +8,8 @@
 import Foundation
 
 enum CarBodyStyle: String, CaseIterable {
-    case Coupe = "Coupe"
-    case Hatchback = "Hatchback"
-    case Sedan = "Sedan"
+    case Coupe 
+    case Hatchback
+    case Sedan
 }
 

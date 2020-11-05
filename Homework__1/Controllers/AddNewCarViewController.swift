@@ -9,9 +9,6 @@
 
 import UIKit
 
-
-
-
 class AddNewCarViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var manufacturerTextField: UITextField!
@@ -21,9 +18,8 @@ class AddNewCarViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var carNumberTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    
-    var newCar = Car()
-    let picker = UIPickerView()
+   private var newCar = Car()
+   private let picker = UIPickerView()
     var complition: (( inout Car) -> ())?
     
     override func viewDidLoad() {
@@ -37,7 +33,6 @@ class AddNewCarViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         yearOfProductionTextField.delegate = self
         bodyStyleTextField.delegate = self
         yearOfProductionTextField.keyboardType = .numberPad
-        carNumberTextField.keyboardType = .numberPad
         bodyStyleTextField.inputView = picker
         errorLabel.isHidden = true
         carNumberTextField.text = newCar.carNumber

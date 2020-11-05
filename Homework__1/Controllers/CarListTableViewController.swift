@@ -12,8 +12,8 @@ import UIKit
 
 class CarsTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
-    let picker = UIPickerView()
-    var carList: [Car] = []
+    private let picker = UIPickerView()
+    private var carList: [Car] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +35,6 @@ class CarsTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
